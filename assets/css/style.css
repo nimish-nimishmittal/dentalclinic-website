@@ -22,6 +22,10 @@ h6 {
   font-family: "Roboto", sans-serif;
 }
 
+#abc :hover{
+  position: static;
+}
+
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -926,6 +930,13 @@ section {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
+
+.card{
+  margin-left: 0;
+ 
+
+}
 .services .icon-box {
   margin-bottom: 20px;
   text-align: center;
@@ -935,8 +946,10 @@ section {
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  width: 80px;
-  height: 80px;
+  width: 80px; 
+  /* 80 */
+
+  height: 50px;
   margin-bottom: 20px;
   background: #fff;
   border-radius: 50%;
@@ -987,6 +1000,8 @@ section {
   line-height: 24px;
   font-size: 14px;
 }
+
+
 
 /*--------------------------------------------------------------
 # Appointments
