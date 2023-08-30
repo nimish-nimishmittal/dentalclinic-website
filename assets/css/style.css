@@ -1884,11 +1884,26 @@ section {
   margin-bottom: 2.5rem;
 }
 
-@media (max-width: 1260px) {  
+@media (max-width: 1260px) {
   .grid {
-      grid-gap: 3rem;
-      width: auto;
-      margin-bottom: 2rem;
+    grid-gap: 3rem;
+    width: auto;
+    margin: 0 1.5rem 2rem;
+    padding: 2.5rem; /* Adjusted padding for medium screens */
+  }
+}
+
+
+@media (max-width: 600px) {
+  .grid {
+    grid-gap: 1.5rem;
+    width: auto;
+    margin: 0 1rem 1.5rem;
+    padding: 0; /* Adjusted padding for small screens */
+  }
+  
+  .grid-item {
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1);
   }
 }
 
