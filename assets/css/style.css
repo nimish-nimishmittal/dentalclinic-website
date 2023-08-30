@@ -452,6 +452,7 @@ h6 {
   padding-bottom: 30px;
   margin-bottom: 50px;
   border-top: 4px solid #3fbbc0;
+  width: 920px;
 }
 
 @media (max-width: 1200px) {
@@ -1284,6 +1285,7 @@ section {
 
 .doctors .member .social {
   position: absolute;
+
   left: 0;
   bottom: 0;
   right: 0;
