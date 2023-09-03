@@ -1835,10 +1835,10 @@ section {
 .grid {
   display: grid;
   width: 100%;
-  grid-gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  grid-gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   margin: 0 auto;
-  padding: 3.5rem;
+  padding: 0; /* Remove the padding for small screens */
 }
 
 .grid-item {
@@ -1851,6 +1851,18 @@ section {
   transition: 0.2s;
   position: relative;
   text-align: center;
+  /* Remove the mx-auto class to center the card horizontally */
+  mx-auto: unset;
+  /* Add the text-align: left property to shift the card to the left */
+  text-align: left;
+  /* Add the max-width: 530px property to limit the width of the card */
+  max-width: 530px;
+  /* Add the overflow-x: scroll property to allow the card to scroll horizontally */
+  overflow-x: scroll;
+  /* Remove the padding from the left side of the card */
+  padding-left: 0;
+  /* Add the max-width: 520px property for mobile devices with a screen width of less than 520px */
+  max-width: 520px;
 }
 
 .grid-item:hover {
@@ -1871,7 +1883,8 @@ section {
 
 .card-header {
   /* Font size is reduced */
-  font-size: 1.2rem;
+  font-size: 1rem;
+  align-items: center;
   font-weight: 500;
   color: #0d0d0d;
   margin-bottom: 1.5rem;
@@ -1895,25 +1908,61 @@ section {
   }
 }
 
+/* Adjust card size for mobile screens */
+@media (max-width: 600px) {
+  .grid-item {
+    max-width: 100%; /* Set a maximum width relative to the parent container */
+    margin: 0 auto; /* Center the card horizontally if needed */
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.1); /* Reduce the box shadow */
+  }
+
+  .card-img {
+    height: 15rem; /* Decrease the height of the card image */
+  }
+
+  .card-content {
+    padding: 2rem; /* Decrease the padding inside the card content */
+  }
+
+  .card-header {
+    font-size: 1rem; /* Adjust the font size of the header */
+  }
+
+  .card-text {
+    font-size: 0.8rem; /* Adjust the font size of the text content */
+    margin-bottom: 1.5rem; /* Reduce the margin bottom for text */
+  }
+}
+
+@media (max-width: 600px) {
+  /* Remove the mx-auto class to center the card horizontally */
+  .grid-item {
+    mx-auto: unset;
+  }
+  /* Add the text-align: left property to shift the card to the left */
+  .grid-item {
+    text-align: left;
+  }
+}
 
 @media (max-width: 600px) {
   .grid {
-    grid-gap: 1.5rem;
-    width: auto;
-    margin: 0 1rem 1.5rem;
-    padding: 0; /* Adjusted padding for small screens */
+    padding-left: 0;
+    padding-right: 0;
   }
-  
+}
+
+@media (max-width: 530px) {
+  /* Overwrite the max-width: 530px property for mobile devices with a screen width of less than 530px */
   .grid-item {
-    /* Card size is adjusted for small width mobile */
-    width: 20rem;
-    height: 25rem;
-    margin-bottom: 2rem;
+    max-width: none;
   }
-  
-  .card-header {
-    /* Reduce the distance between the card heading and the image */
-    margin-bottom: 0.5rem;
+}
+
+@media (max-width: 520px) {
+  /* Overwrite the max-width: 520px property for mobile devices with a screen width of less than 520px */
+  .grid-item {
+    max-width: 520px;
   }
 }
 
