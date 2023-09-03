@@ -2064,3 +2064,14 @@ section {
   top: 0;
   bottom: 0;
 }
+
+.raone{
+  display: flex;
+  flex-direction: column;
+  
+  padding: 50px;
+}
+
+.member-img{
+  margin-right: 50px;
+}
