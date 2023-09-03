@@ -143,6 +143,10 @@ h6 {
   #header {
     padding: 15px 0;
   }
+
+  #header .logo img {
+    max-height: 40px;
+  }
 }
 
 #header.header-scrolled {
@@ -164,7 +168,7 @@ h6 {
 }
 
 #header .logo img {
-  max-height: 40px;
+  max-height: 60px;
 }
 
 /**
