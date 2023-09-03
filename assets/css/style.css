@@ -742,22 +742,6 @@ section {
   transition: all 0.3s ease-in-out;
 }
 
-.featured-services .icon img.invisible {
-  opacity: 0;
-}
-
-.featured-services .icon:hover img {
-  opacity: 0;
-}
-
-.featured-services .icon:hover img.invisible {
-  opacity: 1;
-}
-
-.featured-services .icon:hover img.hover {
-  opacity: 1;
-}
-
 .featured-services .icon img.hover {
   position: absolute;
   top: 0;

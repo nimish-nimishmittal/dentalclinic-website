@@ -174,7 +174,10 @@
               class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
             >
               <div class="icon-box" data-aos="fade-up" data-aos-delay="100">
-                <div class="icon"><i class="fas fa-tooth"></i></div>
+                <div class="icon">
+                  <!-- <i class="fas fa-tooth"></i> -->
+                  <img src="images/tooth-whitening.png" alt="">
+                </div>
                 <h4 class="title"><a href="">Dental Treatment</a></h4>
                 <p class="description">
                   Unveil your perfect smile with exceptional dental treatments at Shahi Dental Clinic, where your oral health is our paramount priority.
@@ -185,8 +188,7 @@
               class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
               <div class="icon-box" data-aos="fade-up" data-aos-delay="200">
                 <div class="icon">
-                  <img src="svg/SideFace.svg" alt="">
-                  <img class="hover" src="svg/SideFaceHover.svg" alt="" class="invisible" id="abc" />
+                  <img src="images/skincare.png" alt="">
                 </div>
                 <h4 class="title"><a href="">Facial Aesthetics</a></h4>
                 <p class="description">
@@ -198,7 +200,10 @@
               class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0"
             >
               <div class="icon-box" data-aos="fade-up" data-aos-delay="300">
-                <div class="icon"><i class="fas fa-crosshairs"></i></div>
+                <div class="icon">
+                  <!-- <i class="fas fa-crosshairs"></i> -->
+                  <img src="images/tattoo.png" alt="">
+                </div>
                 <h4 class="title"><a href="">Tattoo Removal</a></h4>
                 <p class="description">
                   Say goodbye to unwanted ink with expert Tattoo Removal at Shahi Dental Clinic, where advanced technology meets skilled care for a clean canvas anew.
@@ -210,7 +215,10 @@
             >
               <div class="icon-box" data-aos="fade-up" data-aos-delay="400">
          
-              <div class="icon">   <i class="fas fa-user-doctor"></i></div>
+              <div class="icon">
+                <!-- <i class="fas fa-user-doctor"></i> -->
+                <img src="images/human-body.png" alt="">
+              </div>
                 <h4 class="title"><a href="">Body Sculpting/Cryolypolysis</a></h4>
                 <p class="description">
                   Sculpt your body the way you envision with Body Sculpting/Cryolipolysis at Shahi Dental Clinic, merging technology and expertise for your desired transformation.
@@ -1994,32 +2002,33 @@
     <script src="assets/vendor/php-email-form/validate.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbx7cFeOnodLt9o2K3-72jtkwU7rgjjJ1si8GzdofdBSaLSNdQ1eFw3Qix_fV_pSRpMqOw/exec'; // Replace with your script URL
-      const form = document.forms['formName'];
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbx7cFeOnodLt9o2K3-72jtkwU7rgjjJ1si8GzdofdBSaLSNdQ1eFw3Qix_fV_pSRpMqOw/exec'; // Replace with your script URL
+    const form = document.forms['appointmentForm']; // Use the correct form name
     
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-        
-        fetch(scriptURL, {
-          method: 'POST',
-          body: new FormData(form)
-        })
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+  
+      fetch(scriptURL, {
+        method: 'POST',
+        body: new FormData(form),
+      })
         .then(response => response.json())
         .then(data => {
           if (data.result === 'success') {
             alert("Thank you! Your form is submitted successfully.");
-            // You can display the success message on the page instead of using an alert
+            // You can replace console.log with any other appropriate actions.
           } else {
-            alert('Error: ' + data.error);
-            // You can display the error message on the page instead of using an alert
+            console.error('Error: ' + data.error);
+            alert("Sorry we couldn't submit your form.")
+            // You can replace console.error with any other appropriate error handling.
           }
         })
         .catch(error => {
           console.error('Error!', error.message);
-          // You can display the error message on the page instead of using the console
+          // You can replace console.error with any other appropriate error handling.
         });
-      });
-    </script>
+    });
+  </script>
     
   </body>
 </html>
