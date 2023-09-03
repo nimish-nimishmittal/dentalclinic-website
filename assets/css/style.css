@@ -1817,7 +1817,7 @@ section {
 }
 
 .grid {
-  display: grid;
+  display: grid flex;
   width: 100%;
   grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -2118,3 +2118,12 @@ section {
 .member-img{
   margin-right: 50px;
 }
+
+#def{
+  height: 390px;
+  width: 690px;
+   margin-top: 50px;
+   /* margin-bottom: 350px; */
+   /* height: fit-content; */
+}
+
