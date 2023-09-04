@@ -1818,7 +1818,7 @@ section {
 }
 
 .grid {
-  display: grid flex;
+  display: grid;
   width: 100%;
   grid-gap: 1.5rem;
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
@@ -1886,6 +1886,7 @@ section {
 
 @media (max-width: 1260px) {
   .grid {
+    display: block;
     grid-gap: 3rem;
     width: auto;
     margin: 0 1.5rem 2rem;
